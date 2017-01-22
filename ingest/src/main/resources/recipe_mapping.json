@@ -1,0 +1,56 @@
+{
+  "recipe": {
+    "properties": {
+      "uri": { "type": "keyword" },
+      "label": { "type": "keyword" },
+      "image": { "type": "keyword" },
+      "source": { "type": "keyword" },
+      "sourceIcon": { "type": "keyword" },
+      "url": { "type": "keyword" },
+
+      "yield": { "type": "long" },
+      "calories": { "type": "double" },
+      "totalWeight": { "type": "double" },
+
+      "ingredientLines": { "type": "text" },
+      "ingredients": {
+        "type": "nested",
+        "properties": {
+          "text": { "type": "text" },
+          "quantity": { "type": "double" },
+          "measure": { "type": "keyword" },
+          "food": { "type": "keyword" },
+          "weight": { "type": "double" }
+        }
+      },
+
+      "digest": {
+        "type": "nested",
+        "properties": {
+          "label":  { "type": "keyword" },
+          "tag":  { "type": "keyword" },
+          "total": { "type": "double" },
+          "daily":{ "type": "double" },
+          "unit":  { "type": "keyword" }
+        }
+      },
+
+      "som": {
+        "properties": {
+          "pos": { "type": "long" },
+          "col": { "type": "long" },
+          "row": { "type": "long" },
+          "dist": { "type": "double" },
+          "nutrient": {
+            "type": "nested",
+            "properties": {
+              "label": { "type": "keyword" },
+              "weight": { "type": "double" },
+              "daily": { "type": "double" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

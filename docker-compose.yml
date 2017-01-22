@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  server:
+    build: ./docker/php/
+    ports:
+     - "8000:80"
+    volumes:
+     - ./visualize:/src
+    links:
+     - elasticsearch-5
+  kibana-5:
+    container_name: kibana-5
+    image: kibana
+    ports:
+      - "5601:5601"
+    links:
+      - elasticsearch-5:elasticsearch
+  elasticsearch-5:
+    container_name: elasticsearch-5
+    image: elasticsearch
+    volumes:
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
+      - ./data/config:/usr/share/elasticsearch/config
+    ports:
+      - "9200:9200"
+      - "9300:9300"

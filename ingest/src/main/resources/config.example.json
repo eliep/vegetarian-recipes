@@ -1,0 +1,26 @@
+{
+  "edamamApi": {
+    "appId": "EDAMAM API ID",
+    "appKey": "EDAMAM API KEY",
+    "query": [
+      "egg",
+      "tbs",
+      "rice",
+      "iron",
+      "cups",
+      "salt",
+      "teaspoon"
+    ],
+    "querySize": 100,
+    "health": "vegetarian"
+  },
+
+  "elasticsearch": {
+    "hostname": "localhost",
+    "port": "9300"
+  },
+
+  "cache": {
+    "folder": "/path/to/cache/folder"
+  }
+}

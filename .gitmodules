@@ -1,0 +1,6 @@
+[submodule "learn/cpr"]
+	path = learn/cpr
+	url = git@github.com:whoshuu/cpr.git
+[submodule "learn/vendor/cpr"]
+	path = learn/vendor/cpr
+	url = git@github.com:whoshuu/cpr.git
